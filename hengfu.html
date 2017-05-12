@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<meta name="viewport" content="width=320.1,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<title>横幅下单</title>
+</head>
+	<link rel="stylesheet" href="http://res.wx.qq.com/open/libs/weui/0.4.0/weui.min.css">
+	<link rel="stylesheet" href="https://weui.io/weui.css">
+	<link rel="stylesheet" href="https://weui.io/example.css">
+<body>
+	<div class="page__hd">
+		<h1 class="page__title">横幅下单</h1>
+		<p class="page__desc">在此页面对横幅进行下单</p>
+	</div>
+	<form action="          " method="post">
+	<div class="page__bd">
+		<div class="weui-cells__title">横幅规格</div>
+		<div class="weui-cells weui-cells_radio">
+			<label class="weui-cell weui-check__label" for="eight">
+				<div class="weui-cell__bd">
+					<p>70cm×800cm</p>
+				</div>
+				<div class="weui-cell__ft">
+					<input type="radio" class="weui-check" name="type" id="eight">
+					<span class="weui-icon-checked"></span>
+				</div>
+			</label>
+			<label class="weui-cell weui-check__label" for="nine">
+				<div class="weui-cell__bd">
+					<p>70cm×900cm</p>
+				</div>
+				<div class="weui-cell__ft">
+					<input type="radio" name="type" class="weui-check" id="nine">
+					<span class="weui-icon-checked"></span>
+				</div>
+			</label>
+			<label class="weui-cell weui-check__label" for="ten">
+				<div class="weui-cell__bd">
+					<p>70cm×1000cm</p>
+				</div>
+				<div class="weui-cell__ft">
+					<input type="radio" name="type" class="weui-check" id="ten">
+					<span class="weui-icon-checked"></span>
+				</div>
+			</label>
+			<label class="weui-cell weui-check__label" for="others">
+				<div class="weui-cell__bd">
+					<p>自定义，可在“需求描述”中说明</p>
+				</div>
+				<div class="weui-cell__ft">
+					<input type="radio" name="type" class="weui-check" id="others">
+					<span class="weui-icon-checked"></span>
+				</div>
+			</label>
+		</div>
+		
+	<div class="weui-cells__title">需求描述</div>
+		<div class="weui-cells weui-cells_form">
+			<div class="weui-cell">
+				<div class="weui-cell__bd">
+					<textarea placeholder="这里填写所用文字" name="text" rows="5" cols="40" id="text" style="font-size:12px;"></textarea>
+				</div>
+			</div>
+			<div class="weui-cell">
+				<div class="weui-cell__bd">
+					<textarea placeholder="这里填写必要说明，如特殊尺寸等" name="additional" rows="5" cols="40" id="additional" style="font-size:12px;"></textarea>
+				</div>
+			</div>
+			<div class="weui-cell__hd">
+					<label class="weui-label">底色</label>
+			</div>
+				<div class="weui-cell__bd">
+					<input class="weui-input" name="color" placeholder="输入颜色" id="color">
+				</div>
+		</div>
+		
+		<div class="weui-cells__title">用户信息</div>
+		<div class="weui-cells">
+			<div class="weui-cell">
+				<div class="weui-cell__hd">
+					<label class="weui-label">QQ号</label>
+				</div>
+				<div class="weui-cell__bd">
+					<input class="weui-input" name="qq" placeholder="请输入QQ号" id="qq">
+				</div>
+			</div>
+			
+			<div class="weui-cell">
+				<div class="weui-cell__hd">
+					<label class="weui-label">手机号</label>
+				</div>
+				<div class="weui-cell__bd">
+					<input class="weui-input" name="tel" placeholder="请输入手机号" id="tel">
+				</div>
+			</div>
+			
+			<div class="weui-cell">
+				<div class="weui-cell__hd">
+					<label for="" class="weui-label">期望交货日期</label>
+				</div>
+				<div class="weui-cell__bd">
+					<input class="weui-input" name="date" type="date" value="" id="date">
+				</div>
+			</div>
+			
+			<div class="weui-cell">
+				<div class="weui-cell__hd">
+					<label for="" class="weui-label">具体时间段</label>
+				</div>
+				<div class="weui-cell__bd">
+					<input class="weui-input" name="time" type="text" placeholder="您希望的交货时间段" id="time">
+				</div>
+			</div>
+			
+			<div class="weui-cell">
+				<div class="weui-cell__hd">
+					<label class="weui-label">期望交货地点</label>
+				</div>
+				<div class="weui-cell__bd">
+					<input class="weui-input" name="place" placeholder="请输入一个地址" id="place">
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	<input type="submit" class="weui_btn weui_btn_primary" value="提交你的订单">
+	</form>
+ </body>
+</html>
