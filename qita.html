@@ -7,70 +7,56 @@
 <meta name="Keywords" content="">
 <meta name="Description" content="">
 <meta name="viewport" content="width=320.1,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-<title>横幅下单</title>
+<title>其他产品下单</title>
 </head>
 	<link rel="stylesheet" href="http://res.wx.qq.com/open/libs/weui/0.4.0/weui.min.css">
 	<link rel="stylesheet" href="https://weui.io/weui.css">
 	<link rel="stylesheet" href="https://weui.io/example.css">
 <body>
 	<div class="page__hd">
-		<h1 class="page__title">横幅下单</h1>
-		<p class="page__desc">在此页面对横幅进行下单</p>
+		<h1 class="page__title">其他产品下单</h1>
+		<p class="page__desc">在此页面对除海报与横幅外的宣传用品进行下单</p>
 	</div>
 	<form action="          " method="post">
-	<div class="page__bd">
-		<div class="weui-cells__title">横幅规格</div>
-		<div class="weui-cells weui-cells_radio">
-			<label class="weui-cell weui-check__label" for="eight">
-				<div class="weui-cell__bd">
-					<p>70cm×800cm</p>
-				</div>
-				<div class="weui-cell__ft">
-					<input type="radio" class="weui-check" name="type" id="eight">
-					<span class="weui-icon-checked"></span>
-				</div>
-			</label>
-			<label class="weui-cell weui-check__label" for="nine">
-				<div class="weui-cell__bd">
-					<p>70cm×900cm</p>
-				</div>
-				<div class="weui-cell__ft">
-					<input type="radio" name="type" class="weui-check" id="nine">
-					<span class="weui-icon-checked"></span>
-				</div>
-			</label>
-			<label class="weui-cell weui-check__label" for="ten">
-				<div class="weui-cell__bd">
-					<p>70cm×1000cm</p>
-				</div>
-				<div class="weui-cell__ft">
-					<input type="radio" name="type" class="weui-check" id="ten">
-					<span class="weui-icon-checked"></span>
-				</div>
-			</label>
-			<label class="weui-cell weui-check__label" for="others">
-				<div class="weui-cell__bd">
-					<p>自定义，可在“需求描述”中说明</p>
-				</div>
-				<div class="weui-cell__ft">
-					<input type="radio" name="type" class="weui-check" id="others">
-					<span class="weui-icon-checked"></span>
-				</div>
-			</label>
-		</div>
 		
 	<div class="weui-cells__title">需求描述</div>
+		<div class="weui-cells">
+			<div class="weui-cell">
+				<div class="weui-cell__hd">
+					<label class="weui-label">宣传用品类型</label>
+				</div>
+				<div class="weui-cell__bd">
+					<input class="weui-input" name="kind" placeholder="比如KT板，宣传单等" id="kind">
+				</div>
+			</div>
+		</div>
 		<div class="weui-cells weui-cells_form">
 			<div class="weui-cell">
 				<div class="weui-cell__bd">
-					<textarea placeholder="这里填写所用文字和使用底色" name="text" rows="5" cols="40" id="text" style="font-size:12px;"></textarea>
+					<textarea placeholder="这里填写关于产品的相关描述" name="text" rows="5" cols="40" id="text" style="font-size:12px;"></textarea>
 				</div>
 			</div>
-			<div class="weui-cell">
+		</div>
+		<div class="weui-cells__title">是否需要进行设计</div>
+		<div class="weui-cells weui-cells_radio">
+			<label class="weui-cell weui-check__label" for="yes">
 				<div class="weui-cell__bd">
-					<textarea placeholder="这里填写必要说明，如特殊尺寸等" name="additional" rows="5" cols="40" id="additional" style="font-size:12px;"></textarea>
+					<p>是</p>
 				</div>
-			</div>
+				<div class="weui-cell__ft">
+					<input type="radio" class="weui-check" name="isdesign" id="yes">
+					<span class="weui-icon-checked"></span>
+				</div>
+			</label>
+			<label class="weui-cell weui-check__label" for="no">
+				<div class="weui-cell__bd">
+					<p>否</p>
+				</div>
+				<div class="weui-cell__ft">
+					<input type="radio" name="isdesign" class="weui-check" id="no">
+					<span class="weui-icon-checked"></span>
+				</div>
+			</label>
 		</div>
 		
 		<div class="weui-cells__title">用户信息</div>
@@ -128,11 +114,17 @@
 	<script type="text/javascript">
 	function check()
 	{
-		var a=document.getElementById("text").value;
-		var c=document.getElementById("tel").value; 
+		var a=document.getElementById("kind").value;
+		var b=document.getElementById("text").value;
+		var c=document.getElementById("tel").value;
 		if(a=='')
 		{
-			alert('请输入所用文字以及底色');
+			alert('请输入用品类型');
+			return false;
+		}
+		if(b=='')
+		{
+			alert('请输入相关描述');
 			return false;
 		}
 		if(c=='')
@@ -140,7 +132,7 @@
 			alert('请输入您的联系方式');
 			return false;
 		}
-		if(a!=''&&c!='')
+		if(a!=''&&b==''&&c!='')
 		{
 			alert('提交成功');
 			return true;
