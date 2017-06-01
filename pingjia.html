@@ -7,42 +7,30 @@
 <meta name="Keywords" content="">
 <meta name="Description" content="">
 <meta name="viewport" content="width=320.1,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-<title>评价</title>
+<title>收货</title>
 </head>
 	<link rel="stylesheet" href="http://res.wx.qq.com/open/libs/weui/0.4.0/weui.min.css">
 	<link rel="stylesheet" href="https://weui.io/weui.css">
 	<link rel="stylesheet" href="https://weui.io/example.css">
 <body>
 	<div class="page__hd">
-		<h1 class="page__title">评价</h1>
-		<p class="page__desc">在此页面写下你的评价</p>
+		<h1 class="page__title">确认收货</h1>
+		<p class="page__desc">您可以在此页面写下你的评价</p>
 	</div>
-	<form action="          " method="post">
+	<form action="" method="post">
+		<input type="button" onclick="" class="weui_btn weui_btn_primary" id="makesure" name="makesure" value="点击这里确认收货">
 		<div class="weui-cells weui-cells_form">
 			<div class="weui-cell">
 				<div class="weui-cell__bd">
-					<textarea placeholder="欢迎留下您对我们服务的评价或者建议" name="additonal" rows="5" cols="40" id="additional" style="font-size:12px;"></textarea>
+					<textarea placeholder="欢迎留下您对我们服务的评价或者建议" name="additonal" rows="8" cols="40" id="additional" style="font-size:12px;"></textarea>
 				</div>
 			</div>
 		</div>
 
-	<input type="submit" onclick="check()" class="weui_btn weui_btn_primary" value="提交">
+	<input type="submit" class="weui_btn weui_btn_primary" value="提交">
 	</form>
 	<script type="text/javascript">
-	function check()
-	{
-		var a=document.getElementById("additional").value;
-		if(a=='')
-		{
-			alert('请输入高度');
-			return false;
-		}
-		else
-		{
-			alert('提交成功')；
-			return true；
-		}
-}
+
 	</script>
  </body>
 </html>
