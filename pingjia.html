@@ -26,7 +26,23 @@
 			</div>
 		</div>
 
-	<input type="submit" class="weui_btn weui_btn_primary" value="提交">
+	<input type="submit" onclick="check()" class="weui_btn weui_btn_primary" value="提交">
 	</form>
+	<script type="text/javascript">
+	function check()
+	{
+		var a=document.getElementById("additional").value;
+		if(a=='')
+		{
+			alert('请输入高度');
+			return false;
+		}
+		else
+		{
+			alert('提交成功')；
+			return true；
+		}
+}
+	</script>
  </body>
 </html>
