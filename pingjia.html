@@ -15,10 +15,20 @@
 <body>
 	<div class="page__hd">
 		<h1 class="page__title">确认收货</h1>
-		<p class="page__desc">您可以在此页面写下你的评价</p>
+		<p class="page__desc">您还可以在此页面写下你的评价</p>
 	</div>
 	<form action="" method="post">
-		<input type="button" onclick="" class="weui_btn weui_btn_primary" id="makesure" name="makesure" value="点击这里确认收货">
+	<div class="weui-cells__title">
+			<img src="er.png">
+	</div>
+	<div class="weui-cell">
+		<div class="weui-cell__hd">
+			<label class="weui-label">应付金额</label>
+		</div>
+		<div class="weui-cell__bd">
+			<input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')" class="weui-input" name="money" placeholder="填入金额" id="money">
+		</div>
+	</div>
 		<div class="weui-cells weui-cells_form">
 			<div class="weui-cell">
 				<div class="weui-cell__bd">
@@ -27,10 +37,23 @@
 			</div>
 		</div>
 
-	<input type="submit" class="weui_btn weui_btn_primary" value="提交">
+	<input type="submit" onclick="sure()" class="weui_btn weui_btn_primary" value="确认收货">
 	</form>
 	<script type="text/javascript">
-
+		function sure()
+		{
+			var a=document.getElementById("money").value;
+			if(a=='')
+			{
+				alert('没付钱');
+				return false;
+			}
+			else
+			{
+				alert('提交成功')
+				return true;
+			}
+		}
 	</script>
  </body>
 </html>
